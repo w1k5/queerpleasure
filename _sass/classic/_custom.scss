@@ -5,7 +5,7 @@
 //
 // {:.text-boxed-float-left}
 // This is the text that will be in the box on the left hand side.
-// 
+//
 // ===============================================================
 
 // text centered in a column
@@ -46,7 +46,7 @@
 // Image styles, use as follows in *.md files:
 //
 // ![image-name](image-source){:.image-centered}
-// 
+//
 // ===============================================================
 
 // An image centered in a column with nothing on either side
@@ -130,7 +130,8 @@
 // ===============================================================
 
 .highlighter-rouge {
-	background: #eee;
+	background-color: white;
+	padding: 3px;
 }
 
 .highlight {

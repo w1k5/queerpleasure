@@ -2,7 +2,7 @@
 
 	// Don't display the checkbox
 	display: none;
-			
+
 	// When selected, display the menu bar and bottom separator
 	&:checked ~ {
 		@include narrow-layout {
@@ -48,12 +48,12 @@
 }
 
 .banner-area {
-
+	background-color: $grey-color;
 	// Layout
 	width: 100%;
 
 	.banner {
-	
+
 		// Sizing: The container occupies the entire width and height as specified
 		width: 100%;
 		@include narrow-layout { @if $banner-enabled-narrow { height: $banner-height-narrow; } }
@@ -64,12 +64,12 @@
 		@include narrow-layout { background: $banner-background-narrow; }
 		@include medium-layout { background: $banner-background-medium; }
 		@include widest-layout { background: $banner-background-widest; }
-		
+
 		z-index: 1;
 	}
 
 	.icon-container {
-		
+
 		// Sizing: This is an overlay container over the entire banner
 		@extend .overlay;
 		@include narrow-layout { height: $banner-height-narrow; }
@@ -103,14 +103,14 @@
 			justify-content: $banner-icon-justify-content-widest;
 			align-items: $banner-icon-align-items-widest;
 		}
-		
+
 		// Ordering
 		@include narrow-layout { z-index: $banner-icon-z-index-narrow; }
 		@include medium-layout { z-index: $banner-icon-z-index-medium; }
 		@include widest-layout { z-index: $banner-icon-z-index-widest; }
 
-			
-		.banner-icon {				
+
+		.banner-icon {
 
 			// Position tweaks
 			@include narrow-layout { padding: $banner-icon-padding-narrow; }
@@ -125,13 +125,13 @@
 			@include narrow-layout { height: $banner-icon-height-narrow; }
 			@include medium-layout { height: $banner-icon-height-medium; }
 			@include widest-layout { height: $banner-icon-height-widest; }
-							
+
 			// Background
 			@include narrow-layout { background: $banner-icon-background-narrow; }
 			@include medium-layout { background: $banner-icon-background-medium; }
-			@include widest-layout { background: $banner-icon-background-widest; }			
+			@include widest-layout { background: $banner-icon-background-widest; }
 		}
-		
+
 		// Content (icon image)
 		// Note: Firefox needs the 'after' attribute to display the icon. Other browsers seem fine without it.
 		// Issue no 19.
@@ -141,15 +141,15 @@
 			@include widest-layout { content: $banner-icon-url-widest; }
 		}
 	}
-		
+
 	.title-area-container {
-		
+
 		// Sizing: This is an overlay container over the entire banner
 		@extend .overlay;
 		@include narrow-layout { height: $banner-height-narrow; }
 		@include medium-layout { height: $banner-height-medium; }
 		@include widest-layout { height: $banner-height-widest; }
-		
+
 		// Display or not
 		@include narrow-layout {
 			@if ($banner-enabled-narrow and ($banner-title-enabled-narrow or $banner-subtitle-enabled-narrow)) { display: flex; }
@@ -170,10 +170,10 @@
 		@include widest-layout { z-index: $banner-title-area-z-index-widest; }
 
 		// Position the title area
-		@include narrow-layout {			
+		@include narrow-layout {
 			justify-content: $banner-title-area-justify-content-narrow;
 			align-items: $banner-title-area-align-items-narrow;
-		}		
+		}
 		@include medium-layout {
 			justify-content: $banner-title-area-justify-content-medium;
 			align-items: $banner-title-area-align-items-medium;
@@ -182,9 +182,9 @@
 			justify-content: $banner-title-area-justify-content-widest;
 			align-items: $banner-title-area-align-items-widest;
 		}
-		
+
 		.title-area {
-			
+
 			// Sizing
 			@include narrow-layout {
 				width: $banner-title-area-width-narrow;
@@ -225,87 +225,88 @@
 			// Title appearance
 			@include narrow-layout {
 				@if ($banner-title-enabled-narrow) {
-	
+
 					.title p {
-			
+
 						// Set the margins to zero to avoid shifts in placing.
 						margin: 0;
-					
+
 						// Position fine tuning uses padding
 						padding: $banner-title-padding-narrow;
-					
+
 						// Appearance of the title
 						font: $banner-title-font-narrow;
 						color: $banner-title-color-narrow;
 					}
-					
+
 				} @else {
-				
+
 					.title { display: none; }
 				}
 			}
 			@include medium-layout {
 				@if ($banner-title-enabled-medium) {
-	
+
 					.title p {
-			
+
 						// Set the margins to zero to avoid shifts in placing.
 						margin: 0;
-					
+
 						// Position fine tuning uses padding
 						padding: $banner-title-padding-medium;
-					
+
 						// Appearance of the title
 						font: $banner-title-font-medium;
 						color: $banner-title-color-medium;
 					}
-					
+
 				} @else {
-				
+
 					.title { display: none; }
 				}
 			}
 			@include widest-layout {
 				@if ($banner-title-enabled-widest) {
-	
+
 					.title p {
-			
+
 						// Set the margins to zero to avoid shifts in placing.
 						margin: 0;
-					
+
 						// Position fine tuning uses padding
 						padding: $banner-title-padding-widest;
-					
+
 						// Appearance of the title
 						font: $banner-title-font-widest;
+						text-shadow: -1px 0px white;
 						color: $banner-title-color-widest;
 					}
-					
+
 				} @else {
-				
+
 					.title { display: none; }
 				}
 			}
-			
+
 			// Subtitle appearance
 			@include narrow-layout {
 				@if ($banner-subtitle-enabled-narrow) {
 
 					.subtitle p {
-			
+
 						// Set the margins to zero to avoid shifts in placing.
 						margin: 0;
-					
+
 						// Position fine tuning uses padding
 						padding: $banner-subtitle-padding-narrow;
-					
+
 						// Appearance of the title
 						font: $banner-subtitle-font-narrow;
 						color: $banner-subtitle-color-narrow;
 					}
-				
+
 				} @else {
-				
+
 					.subtitle { display: none; }
 				}
 			}
@@ -313,20 +314,20 @@
 				@if ($banner-subtitle-enabled-medium) {
 
 					.subtitle p {
-			
+
 						// Set the margins to zero to avoid shifts in placing.
 						margin: 0;
-					
+
 						// Position fine tuning uses padding
 						padding: $banner-subtitle-padding-medium;
-					
+
 						// Appearance of the title
 						font: $banner-subtitle-font-medium;
 						color: $banner-subtitle-color-medium;
 					}
-				
+
 				} @else {
-				
+
 					.subtitle { display: none; }
 				}
 			}
@@ -334,28 +335,28 @@
 				@if ($banner-subtitle-enabled-widest) {
 
 					.subtitle p {
-			
+
 						// Set the margins to zero to avoid shifts in placing.
 						margin: 0;
-					
+
 						// Position fine tuning uses padding
 						padding: $banner-subtitle-padding-widest;
-					
+
 						// Appearance of the title
 						font: $banner-subtitle-font-widest;
 						color: $banner-subtitle-color-widest;
 					}
-				
+
 				} @else {
-				
+
 					.subtitle { display: none; }
 				}
 			}
 		}
 	}
-		
+
 	.label-container {
-			
+
 		// The container occupies the entire banner area
 		@extend .overlay;
 		@include narrow-layout { height: $banner-height-narrow; }
@@ -403,25 +404,25 @@
 			justify-content: center;
 			align-items: center;
 
-			// Insert the menu symbol		
+			// Insert the menu symbol
 			@include narrow-layout { p:after { content: $banner-menu-symbol-code-narrow; } }
 			@include medium-layout { p:after { content: $banner-menu-symbol-code-medium; } }
 			@include widest-layout { p:after { content: $banner-menu-symbol-code-widest; } }
 
-			// Size the tap area 
+			// Size the tap area
 			@include narrow-layout { width: $banner-menu-symbol-tap-area-width-narrow; }
 			@include medium-layout { width: $banner-menu-symbol-tap-area-width-medium; }
 			@include widest-layout { width: $banner-menu-symbol-tap-area-width-widest; }
-			
+
 			@include narrow-layout { height: $banner-menu-symbol-tap-area-height-narrow; }
 			@include medium-layout { height: $banner-menu-symbol-tap-area-height-medium; }
 			@include widest-layout { height: $banner-menu-symbol-tap-area-height-widest; }
-					
+
 			// The background
 			@include narrow-layout { background: $banner-menu-symbol-tap-area-background-narrow; }
 			@include medium-layout { background: $banner-menu-symbol-tap-area-background-medium; }
 			@include widest-layout { background: $banner-menu-symbol-tap-area-background-widest; }
-					
+
 			// The border
 			@include narrow-layout { border: $banner-menu-symbol-tap-area-border-narrow; }
 			@include medium-layout { border: $banner-menu-symbol-tap-area-border-medium; }
@@ -429,31 +430,31 @@
 
 			// The label is used as checkbox-label, it should show a pointer when the mouse is above it.
 			cursor: pointer;
-				
+
 			p {
 				// Fine tune the position of the menu symbol in the tap area
 				@include narrow-layout { padding: $banner-menu-symbol-padding-narrow; }
 				@include medium-layout { padding: $banner-menu-symbol-padding-medium; }
 				@include widest-layout { padding: $banner-menu-symbol-padding-widest; }
-				
+
 				// The font
 				@include narrow-layout { font: $banner-menu-symbol-font-narrow; }
 				@include medium-layout { font: $banner-menu-symbol-font-medium; }
 				@include widest-layout { font: $banner-menu-symbol-font-widest; }
-						
+
 				// The color
 				@include narrow-layout { color: $banner-menu-symbol-color-narrow; }
 				@include medium-layout { color: $banner-menu-symbol-color-medium; }
 				@include widest-layout { color: $banner-menu-symbol-color-widest; }
 			}
 		}
-	}		
-	
+	}
+
 	.menubar-top-separator {
 
 		// Use the entire width to force vertical appearance
 		width: 100%;
-		
+
 		// Sizing
 		@include narrow-layout { height: $menubar-top-separator-height-narrow; }
 		@include medium-layout { height: $menubar-top-separator-height-medium; }
@@ -475,7 +476,7 @@
 			@if $menubar-top-separator-enabled-widest { display: block; } @else { display: none; }
 		}
 	}
-		
+
 	.menubar-bottom-separator {
 
 		// Use the entire width to force vertical appearance
@@ -502,7 +503,7 @@
 			@if $menubar-bottom-separator-enabled-widest { display: block; } @else { display: none; }
 		}
 	}
-	
+
 	.add-to-banner-area-height {
 		width: 100%;
 		@include narrow-layout { height: $add-to-banner-area-height-narrow; }
@@ -527,7 +528,7 @@
 }
 
 // Added to the banner-area that is used as a placeholder to keep the column-panel from appearing below the
-// banner-area. It does not seem to be necessary though. Still,it could prevent future problems, hence 
+// banner-area. It does not seem to be necessary though. Still,it could prevent future problems, hence
 //
 .invisible {
 	width: 100%;

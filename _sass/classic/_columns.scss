@@ -4,9 +4,9 @@
 //
 
 .secondary-column {
-	
+
 	// Use the theme insets to keep the content of the column away from the edges.
-	@extend .theme-insets;	
+	@extend .theme-insets;
 
 	// Set the background
 	@include narrow-layout { background: $secondary-column-background-narrow; }
@@ -26,7 +26,7 @@ main {
 }
 
 .tertiary-column {
-	
+
 	// Use the theme insets to keep the content of the column away from the edges.
 	@extend .theme-insets;
 
@@ -39,39 +39,38 @@ main {
 // The layout for the column panel is the main driver for the RWD aspects of this theme.
 //
 .column-panel {
-
 	// Layout
 	display: flex;
-	
+
 	@include narrow-layout {
-	
+
 		// Background for the entire panel
 		background: $column-panel-background-narrow;
-	
+
 		// This layout is column based, i.e. the content is displayed over one another.
 		flex-direction: column;
-				
+
 		// The primary column must be displayed on top, use the 'order' property to enforce this.
 		.primary-column { order: 1; }
 
 		// The secondary column is put below the primary the second place
 		.secondary-column { order: 2; }
 
-		// Unused		
+		// Unused
 		.tertiary-column,
 		.secondary-separator,
 		.tertiary-separator,
 		.secondary-column .vmenu-container { display: none; }
 	}
-	
+
 	@include medium-layout {
-	
+
 		// Background for the entire panel
 		background: $column-panel-background-medium;
-		
+
 		// This layout is row based
 		flex-direction: row;
-		
+
 		// The secondary column uses a fixed witdh and hosts both the secondary and tertiary column content
 		.secondary-column { width: $secondary-column-width; }
 
@@ -84,19 +83,18 @@ main {
 		.tertiary-column,
 		.primary-column .vmenu-container { display: none; }
 	}
-	
+
 	@include widest-layout {
-	
 		// Background for the entire panel
 		background: $column-panel-background-widest;
-	
+		padding: 0px 20vh;
 		// This layout is row based
 		flex-direction: row;
-		
-		// The secondary and tertiary columns uses a fixed witdh 
+
+		// The secondary and tertiary columns uses a fixed witdh
 		.secondary-column { width: $secondary-column-width; }
 		.tertiary-column { width: $tertiary-column-width; }
-							
+
 		// The primary column can grow
 		.primary-column { flex: 1 1 auto; width: 1px; } // A width must be specified
 
@@ -119,4 +117,3 @@ main {
 	@include widest-layout { border-right: 1px solid $column-separator-color-widest; }
 	@if $column-separator-display { display: block; } @else { display: none; }
 }
-

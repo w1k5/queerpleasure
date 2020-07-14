@@ -4,10 +4,7 @@
 // Defines the insets used in the columns and the footer-panel. I.e the empty spaces between text and separators.
 //
 .theme-insets {
-	padding-top: $vspacing-unit;
-	padding-right: $hspacing-unit;
-	padding-bottom: $vspacing-unit;
-	padding-left: $hspacing-unit;
+	padding: $vspacing-unit;
 }
 
 

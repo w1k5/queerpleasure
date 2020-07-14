@@ -1,0 +1,12 @@
+I"�<p>This release addresses an omission that was made when creating v2.0.</p>
+
+<p>Up to now it was not posible to specify the color of a menu item when it was selected, though it was possible to specify the background color. This has now been fixed.</p>
+
+<p>The files <code class="language-plaintext highlighter-rouge">_sass/classic/_menubar.scss</code> has undergone a few minor updates, and in the file <code class="language-plaintext highlighter-rouge">_sass/classic-jekyll-theme.scss</code> some additions have been made.</p>
+
+<p>To keep the naming of items harmonised, the <code class="language-plaintext highlighter-rouge">...item-hover-color-...</code> names have been converted into <code class="language-plaintext highlighter-rouge">...item-color-hover-...</code></p>
+
+<p>A page over creating cron-jobs (on MacOS) to facilitate automatic site generation has been added (under the menu item ‘Jekyll’)</p>
+
+<p>And lastly the version numbers for bundler and rake have been updated.</p>
+:ET

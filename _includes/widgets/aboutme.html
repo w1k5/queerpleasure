@@ -1,0 +1,19 @@
+
+<!-- include recent-posts.html -->
+{%- if jekyll.environment != 'production' and site.data.setup.fast-content-build -%}{%- else -%}
+{%- comment -%}<!--
+
+Usage:
+
+Configure the number of referenced posts by assigning a value to `number-of-recent-posts-in-widget` in the file "_data/setup.yml".
+
+Configure the text for the header message in "_data/text-for.yml" for the item `tRecent`.
+
+-->{%- endcomment %}
+<div>
+	<h1>About Me:</h1>
+<p>I'm A. (she/her/hers), a clueless lesbian and blogger. This is my little space where I talk about all things sex and sexuality. You can find toy reviews, personal articles about my sexual awakening, guides and advice, and anything in between.
+</p>
+</div>
+{%- endif %}
+<!-- end of include recent-posts.html -->

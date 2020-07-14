@@ -1,0 +1,17 @@
+I"Þ<p>This page overrides the secondary and tertiary column settings by disabling them both.</p>
+
+<p>The relevant YAML frontmatter for this page is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: page
+title: No secondary or tertiary column
+menuInclude: yes
+menuTopTitle: Layout
+menuSubs:
+- title: No secondary, no tertiary
+  index: 3
+secondary-column: none
+tertiary-column: none
+---
+</code></pre></div></div>
+:ET

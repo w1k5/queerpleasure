@@ -1,0 +1,8 @@
+I"�<p>Issue: Firefox will not display the icon in the banner or menubar. Other browsers seem to work fine.</p>
+
+<p>Problem: Firefox needs the ‘::after’ attribute for url content to be injected properly.</p>
+
+<p>Issue is fixed in HEAD and will be part of upcoming release 2.4.0.</p>
+
+<p>Note that a release date for 2.4.0 has not been set. Please upgrade to HEAD to fix this issue.</p>
+:ET

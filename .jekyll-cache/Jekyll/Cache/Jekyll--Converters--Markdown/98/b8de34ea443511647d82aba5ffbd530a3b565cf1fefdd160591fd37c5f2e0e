@@ -1,0 +1,17 @@
+I"<p>This page overrides the secondary and tertiary column settings by placing the secondary on the right and the tertiary column on the left.</p>
+
+<p>The relevant YAML frontmatter for this page is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: page
+title: Right secondary left tertiary column
+menuInclude: yes
+menuTopTitle: Layout
+menuSubs:
+- title: Right secondary, left tertiary
+  index: 6
+secondary-column: right
+tertiary-column: present
+---
+</code></pre></div></div>
+:ET

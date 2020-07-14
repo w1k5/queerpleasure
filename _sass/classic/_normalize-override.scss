@@ -20,3 +20,12 @@ textarea {
 	font-size: $theme-font-size;
 	color: $theme-color;
 }
+
+h2 {
+	margin: auto;
+	line-height: 1;
+}
+
+a, a:visited {color: $theme-color;}
+
+a:hover {color: $darkest-color;}

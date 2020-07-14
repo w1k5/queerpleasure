@@ -2,7 +2,7 @@
 .widget {
 	font-size: $small-2-font-size;
 	h1 { font-size: $small-1-font-size; font-weight: bold; }
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure { margin-bottom: 0; }
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure { }
 }
 
 // The separator between widgets, a thin horizontal line.
@@ -11,7 +11,7 @@
 	margin-left: 0;
 	margin-bottom: $vspacing-unit / 2;
 	margin-right: 0;
-	border-bottom: 1px solid $widget-separator-color;
+	border-bottom: 2px solid $widget-separator-color;
 	@if $widget-separator-display { display: block; } @else { display: none; }
 }
 
@@ -64,24 +64,24 @@
 
 // For the categories
 .categories {
-	
+
 	// Do not display the checkbox
 	input { display: none; }
-	
+
 	p { margin: 0 }
-	
+
 	a {
 		text-decoration: none;
 		display: block;
 		background: $category-item-background;
 	}
 	a:hover { background: $category-item-background-hover; }
-	
+
 	label h1 { background: $category-header-background; }
 	label h1:hover { background: $category-header-background-hover; }
-	
+
 	.title { padding: $category-item-padding; }
-	
+
 	// Only display the categories when the cat input checkbox is active
 	.title { display: none; }
 	input:checked ~ { .title { display: block; } }

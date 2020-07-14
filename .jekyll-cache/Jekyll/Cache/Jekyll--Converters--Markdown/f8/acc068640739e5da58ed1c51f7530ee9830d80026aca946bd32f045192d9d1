@@ -1,0 +1,10 @@
+I"Ü<p>This release adds the ability to delay the publication of a page until a specified date.</p>
+
+<p>It works just like the Jekyll build-in feature for posts. I.e. add the YAML front matter <code class="language-plaintext highlighter-rouge">date</code> to a page, and that page will only be included if the build time of the site is after the date specified in the front matter. However the <code class="language-plaintext highlighter-rouge">--future</code> option does not work for pages with a date in the future.</p>
+
+<p>Technically speaking the page will be generated, but it will be empty and there will be no menu structure pointing to it. Hence if there is no explicit link to it, it will remain invisible to the user.</p>
+
+<p>This feature allows the creation of websites using a cron job to automatically create &amp; deliver site updates at predetermined dates.</p>
+
+<p>See <a href="/pages/jekyll/04-cron-job.html">jekyll -&gt; cron job</a> for more information on cron jobs.</p>
+:ET

@@ -1,0 +1,16 @@
+I"²<p>5shekel discovered a problem with the youtube-player widget. Unfortunately it does not seem possible to solve this issue in HTML/CSS. A Javascript solution might be possible but that investigation is currently not scheduled.</p>
+
+<p>The problem:</p>
+
+<p>When using the <code class="language-plaintext highlighter-rouge">banner-position: top-fixed</code> (setup.yml) a video that is included through the youtube-player.html widget will scroll in front of the banner/menu content.</p>
+
+<p>Work around:</p>
+
+<p>Include the video directly in markdown using iframeâ€™s.</p>
+
+<p>The drawback is that the video will not auto-resize with the width of the column, and likely you will need to specify a height/width for the video in the iframe specification.</p>
+
+<p>Files changed:</p>
+
+<p><code class="language-plaintext highlighter-rouge">_data\setup.yml</code> was updated to include a recommendation not to use the youtube widget for top-fixed.</p>
+:ET

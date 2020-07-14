@@ -1,0 +1,8 @@
+I"z<p>Just over a year has gone by since the first Classic release. Since then lots of detail has been added and bugfixes have been made.</p>
+
+<p>With version 2.0 we have implemented more features and added more configuration options. The code base for this theme was updated considerably. Reimplemented may be a better phrasing. The result is a better readable, better documented code base. Even the readability of the generated HTML code has been improved substantially. We believe this makes it even easier to do your own customization.</p>
+
+<p>More good news is that the YAML of the old version still works. So it is not necessary to update existing content.</p>
+
+<p>In addition, this theme is now used to generate its own website at github.io: <a href="http://balancingrock.github.io/classic-jekyll-theme/index.html">http://balancingrock.github.io/classic-jekyll-theme/index.html</a></p>
+:ET

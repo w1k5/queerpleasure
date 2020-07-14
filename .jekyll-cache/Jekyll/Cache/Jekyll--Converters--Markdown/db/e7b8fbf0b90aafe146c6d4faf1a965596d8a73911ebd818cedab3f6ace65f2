@@ -1,0 +1,15 @@
+I"L<p>This release fixes issues #11 and #13</p>
+
+<p>There is a small additional benefit that fixing #13 also created the opportunity for a slight performance improvement that may be noticeable on sites that use many pages.</p>
+
+<p>The changed files are:</p>
+
+<ul>
+  <li>_includes/menubar.html</li>
+  <li>_includes/widgets/categories.html</li>
+</ul>
+
+<p>This release is fully backward compatible with the previous release. Upgrading is recommended for all users.</p>
+
+<p>Version mixup: On github release 2.1.0 and 2.1.1 are identical. On rubygems release 2.1.0 does not have the #11 fix.</p>
+:ET

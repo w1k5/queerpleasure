@@ -1,0 +1,8 @@
+I"�<p>Versioning is a major headache for people doing more than 1 project. It is not called “Versioning Hell” for nothing.</p>
+
+<p>Ruby is no exception. And using Jekyll for website development may in turn cause problems with other Ruby based projects.</p>
+
+<p>We use <a href="https://github.com/rbenv/rbenv">rbenv</a> to solve this problem.</p>
+
+<p>With <a href="https://github.com/rbenv/rbenv">rbenv</a> any Ruby based project can run in its own versioning environment. Recommended!</p>
+:ET

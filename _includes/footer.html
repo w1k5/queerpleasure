@@ -10,7 +10,8 @@ Configuration:
 -->{%- endcomment %}
 <footer>
 	<div>
-		<p>{{ site.description | escape }}</p>
+		<p>{{ site.description | escape }}
+		<br>&copy;{{ site.time | date: '%Y' }}. All rights reserved.</p>
 	</div>
 </footer>
 <!-- end of include footer.html -->

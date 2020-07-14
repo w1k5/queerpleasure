@@ -3,10 +3,10 @@
  */
 .highlight {
   background: #fff;
-  margin-bottom: $vspacing-unit / 2; // Replaces :  @extend %vertical-rhythm;
+  margin: $vspacing-unit / 2; // Replaces :  @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: #eef;
+    background: white;
   }
 
   .c     { color: #998; font-style: italic } // Comment

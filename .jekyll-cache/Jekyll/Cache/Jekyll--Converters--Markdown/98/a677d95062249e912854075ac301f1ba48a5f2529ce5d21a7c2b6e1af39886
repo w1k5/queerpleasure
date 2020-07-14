@@ -1,0 +1,8 @@
+I"<p>Also see: <a href="/pages/classic/pages.html">Pages and Posts</a>.</p>
+
+<p>The home page shows a number of full posts. The number of posts shown can be set in <code class="language-plaintext highlighter-rouge">site.data.setup.number-of-posts-on-home-page</code>. By default this is set to <em>5</em>.</p>
+
+<p>There is also a widget called <em>recent-posts</em> which can be used to show date &amp; titles of the most recent posts. The number of posts show can be configured in <code class="language-plaintext highlighter-rouge">site.data.setup.number-of-recent-posts-in-widget</code>.</p>
+
+<p>Then there is a widget called <em>older-posts</em> which can be used to show all previous posts in a summary/detail construction. I.e. with disclosure triangles that drill down from year to month.</p>
+:ET

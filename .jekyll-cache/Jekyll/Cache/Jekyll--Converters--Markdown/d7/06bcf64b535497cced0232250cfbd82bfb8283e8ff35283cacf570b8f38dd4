@@ -1,0 +1,19 @@
+I"…	<p>Pages and Posts in Classic are created as is standard for Jekyll.</p>
+
+<p>Additional YAML front matter:</p>
+
+<ul>
+  <li><strong>comments</strong>: When a disqus account is available, setting the <code class="language-plaintext highlighter-rouge">comments</code> to <em>yes</em> will enable the disqus comment section.</li>
+  <li><strong>secondary-column</strong>: This is an override setting of the general parameter in <code class="language-plaintext highlighter-rouge">site.data.setup.secondary-column</code>. Set this to either <em>none</em>, <em>right</em> or <em>left</em> to affect the placing of the secondary column for this page/post only. Note that disabling the secondary column when the drop-down menu is disabled (i.e. <code class="language-plaintext highlighter-rouge">site.data.setup.drop-down-menu</code> is set to <em>no</em>) will result in the loss of the vertical menu.</li>
+  <li><strong>tertiary-column</strong>: This is an override setting of the general parameter in <code class="language-plaintext highlighter-rouge">site.data.setup.tertiary-column</code>. Set to either <em>none</em> or <em>present</em> to affect placing of the tertiary column for this page/post only.</li>
+  <li><strong>secondary-column-content</strong>: By default the content for the secondary column is taken from <em>_includes/secondary-column.html</em>. Assigning it a different file here will override this default for this page/post only. However if the vertical menu is used (i.e. <code class="language-plaintext highlighter-rouge">site.data.setup.drop-down-menu</code> is set to <em>no</em>), it will remain visible at the top of the content of the secondary column.</li>
+  <li><strong>tertiary-column-content</strong>: By default the content for the tertiary column is taken from <em>_includes/tertiary-column.html</em>. Assigning it a different file here will override this default for this page/post only.</li>
+  <li><strong>banner-position</strong>: The position of the banner area. Use <em>top</em> to place the banner across all three columns, <em>main</em> to place the banner only above the primary column and <em>top-fixed</em> to have the banner pinned at the top of the browser window. This setting is fro this page only.</li>
+</ul>
+
+<h2 id="for-pages">For Pages</h2>
+
+<ul>
+  <li><strong>date</strong>: When present, the page will only be included in the website if this date is earlier than the build time.</li>
+</ul>
+:ET

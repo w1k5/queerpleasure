@@ -19,12 +19,12 @@ Example: <div class='myclass display-block-narrow'><p>Hello</p></div>
 Will display the text "Hello" only when the narrow layout is in use.
 
 -->{%- endcomment %}
-<div class="title-area">
+<div class="title-area"><a class="title-area" style="text-decoration: none;" href="{{ site.url }}">
 	<div class="title">
 		<p>{{ site.title }}</p>
 	</div>
 	<div class="subtitle">
 		<p>{{ site.data.setup.subtitle }}</p>
-	</div>
+	</div></a>
 </div>
 <!-- end of include banner-title-area.html -->

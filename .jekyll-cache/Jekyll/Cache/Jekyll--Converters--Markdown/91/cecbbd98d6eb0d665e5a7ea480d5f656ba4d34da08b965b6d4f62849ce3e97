@@ -1,0 +1,112 @@
+I"_"<h2 id="installation">Installation</h2>
+
+<p>The two most common ways of installing this theme is either using the git <em>clone</em> command, or the gem-based approach.</p>
+
+<p>Either way will work just fine.</p>
+
+<p>If this theme is the basis for your own theme, then it seems prudent to use the <em>clone</em> command. The cloned repository can then serve as the <em>master</em> repository for your websites.</p>
+
+<p>If the only purpose is to create a website, then the gem command will result in less clutter in the website directory.</p>
+
+<p>This installation description presupposes that Jekyll is already installed. If not, please check out the <a href="https://jekyllrb.com">Jekyll</a> website for more information.</p>
+
+<p>No matter which installation method is chosen it is always prudent to make sure the Jekyll environment is up to date by updating the gems:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem update
+</code></pre></div></div>
+
+<h3 id="using-the-git-clone-command">Using the Git clone command</h3>
+
+<h4 id="preparing-for-installation">Preparing for Installation</h4>
+
+<p>The theme uses a pluging called ‘jekyll-data’.</p>
+
+<p>This is installed with the command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-data
+</code></pre></div></div>
+
+<p>At the time of writing jekyll-data is at version 1.0.0. The developper of jekyll-data has announced that all versions below 2.0.0 should be compatible.</p>
+
+<h4 id="install">Install</h4>
+
+<p>Create a new repository with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Balancingrock/classic-jekyll-theme repository-name
+</code></pre></div></div>
+
+<p>of course the <em>repository-name</em> should be replaced with the name of new local repository.</p>
+
+<p>If the theme will be modified and used in more than one website, it may be advantageous to use the local repository only for theme related work. And use the local repository as the master repository for other website development. If you know your way around git, we would even advise to create a separate branch for your own development efforts. That makes it more manageable to merge future changes from the classic theme.</p>
+
+<h4 id="setup">Setup</h4>
+
+<p>There is 1 change that <em>should</em> be made first: in <code class="language-plaintext highlighter-rouge">_config.yml</code> <strong>and</strong> <code class="language-plaintext highlighter-rouge">_sass/classic-jekyll-theme.scss</code> change the definition of <code class="language-plaintext highlighter-rouge">baseurl</code> from <em>“classic-jekyll-theme”</em> to <em>"”</em>.</p>
+
+<p>Now start the jekyll server with the command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>Next point your browser to: <em>localhost:4000</em> and you will see the same site as this one, but hosted on your own computer.</p>
+
+<p>If the <code class="language-plaintext highlighter-rouge">baseurl</code> was not changed, then point the browser to <em>localhost:4000/classic-jekyll-theme/index.html</em>.</p>
+
+<p>To stop the jekyll server use the key combination: <em>CTRL-C</em>.</p>
+
+<p>It is recommended to explore the files <code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_data/setup.yml</code> and <code class="language-plaintext highlighter-rouge">_sass/classic-jekyll-theme.scss</code> before making changes to the theme itself. In general it is save to change any setting in these files and check the results of a modification in the browser. Note that any changes to <code class="language-plaintext highlighter-rouge">_config.yml</code> require a restart of the server as above. Changes to setup and classic-jekyll-theme can be seen bij saving the file and reloading the browser. Note that some changes may require a few seconds before the compilation is ready.</p>
+
+<p>Always check the output of the compilation in the terminal (command line) window! Error messages will appear in that window, not the browser!</p>
+
+<p>And finally: When using <em>git clone</em> you will end up with files in the pages and _posts directory that you don’t need (or want!) Simply delete what you cannot use from any of these directories (the <code class="language-plaintext highlighter-rouge">pages</code> directory can be deleted completely)</p>
+
+<h3 id="gem-based">Gem based</h3>
+
+<p>Install the theme with the command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install classic-jekyll-theme
+</code></pre></div></div>
+
+<p>Since you will need to copy some files from the gem directory, check where that directory is with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle show classic-jekyll-theme
+</code></pre></div></div>
+
+<p>For convenience you can create an alias to the gem directory at the same level as the root of your website directory.</p>
+
+<h4 id="create-a-new-site--setup">Create a new site &amp; Setup</h4>
+
+<p>Create a new website with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new mysite
+</code></pre></div></div>
+
+<p>Change to the new directory <code class="language-plaintext highlighter-rouge">mysite</code>.</p>
+
+<p>Copy the file <code class="language-plaintext highlighter-rouge">_sass/classic-jekyll-theme.scss</code> from the gem directory to <code class="language-plaintext highlighter-rouge">mysite/_sass/classic-jekyll-theme.scss</code>
+Copy the file <code class="language-plaintext highlighter-rouge">_data/setup.yml</code> from the gem directory to <code class="language-plaintext highlighter-rouge">mysite/_data/setup.yml</code></p>
+
+<p>In the file <code class="language-plaintext highlighter-rouge">mysite/_config.yml</code> change <em>theme: minima</em> to <em>theme: classic-jekyll-theme</em>.
+In the file <code class="language-plaintext highlighter-rouge">mysite/Gemfile</code> change <em>gem “minima”, “~&gt; 2.0”</em> to <em>gem “classic-jekyll-theme”</em>.
+In the file <code class="language-plaintext highlighter-rouge">mysite/_sass/classic-jekyll-theme.scss</code> change <em>$baseurl: “classic-jekyll-theme”</em> to <em>$baseurl: ““</em>.</p>
+
+<p>Optional:</p>
+<ul>
+  <li>Remove the <code class="language-plaintext highlighter-rouge">mysite/about.md</code> file.</li>
+  <li>Copy the folder <code class="language-plaintext highlighter-rouge">icons</code> from the gem directory to <code class="language-plaintext highlighter-rouge">mysite/icons</code> (to be used as examples, replace them later with icons of your own)</li>
+  <li>Copy the file <code class="language-plaintext highlighter-rouge">banner-area.md</code> from the gem directory to <code class="language-plaintext highlighter-rouge">mysite/banner-area.md</code> (needed when using a separate banner file, which is <em>not</em> used by default)</li>
+</ul>
+
+<p>Now you are ready to start the jekyll server:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>(Note: depending on what was done before, the <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> may cause problems. If so, simply delete that file. Anytime the <em>bundle</em> command is run it will be recreated when its is not present, and on recreation it will also be filled with the correct data)</p>
+
+<p>It is recommended to explore the files <code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_data/setup.yml</code> and <code class="language-plaintext highlighter-rouge">_sass/classic-jekyll-theme.scss</code> before making changes to the theme itself. In general it is save to change any setting in these files and check the results of a modification in the browser. Note that any changes to <code class="language-plaintext highlighter-rouge">_config.yml</code> require a restart of the server as above. Changes to setup and classic-jekyll-theme can be seen bij saving the file and reloading the browser. Note that some changes may require a few seconds before the compilation is ready.</p>
+
+<p>Always check the output of the compilation in the terminal (command line) window! Error messages will appear in that window, not the browser!</p>
+
+<p>To stop the jekyll server use the key combination: <em>CTRL-C</em>.</p>
+:ET

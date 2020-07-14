@@ -1,0 +1,12 @@
+I"m<p>Classic uses the versioning approach Major.Minor.Patch.</p>
+
+<p>However due to the nature of theme’s the interpretation of these number is slightly different.</p>
+
+<p>Classic will update the <em>Patch</em> number when adding to the content area’s of the theme. I.e. posts or pages. There is no need to follow these updates closely for your own theme.</p>
+
+<p>Classic will update the <em>Minor</em> number when bugfixes or minor additions are made. A list of changed files will be provided. It may be necessary to re-apply changes that were made to the theme’s files at your end.</p>
+
+<p>Classic will update the <em>Major</em> number when significant additions have been made. The difference between minor and major additions is entirely subjective.</p>
+
+<p>Backwards compatibility with previously used YAML tags is a very important driver for further development.</p>
+:ET

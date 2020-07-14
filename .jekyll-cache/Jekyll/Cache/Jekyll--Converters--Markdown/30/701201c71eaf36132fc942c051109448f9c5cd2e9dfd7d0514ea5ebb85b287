@@ -1,0 +1,32 @@
+I"�<p>This release fixes some bugs and improves usability.</p>
+
+<h3 id="bugfixes">Bugfixes</h3>
+
+<ul>
+  <li>Highlighting of the menu path elements for the page displayed did not work correctly. Some menu items were not highlighted.</li>
+  <li>Added missing code to the generation of highlighting in the vertical menu.</li>
+</ul>
+
+<h3 id="improvements">Improvements</h3>
+
+<ul>
+  <li>It is now possible to generate a subsub-menu structure from multiple places. Double sub-items will no longer be generated.</li>
+  <li>Added an automatic horizontal scrollbar to the code sections.</li>
+  <li>A sub-menu in the vertical menu will stay open when a subsub-menu page is visible.</li>
+</ul>
+
+<h3 id="issues">Issues</h3>
+
+<p>This release closes the following issue’s: 14, 15, 16 &amp; 17</p>
+
+<h3 id="known-problems">Known problems</h3>
+
+<p>The youtube-player widget will display in front of all other visible elements. This can cause lengthy menu lists to disappear below the video. Or, when <code class="language-plaintext highlighter-rouge">banner-position: top-fixed</code> is used, the video will scroll over the banner.</p>
+
+<p>Unfortunately there is no known solution, other than including youtube video’s via an iframe:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe src="https://www.youtube.com/embed/video-identifier"&gt;&lt;/iframe&gt;
+</code></pre></div></div>
+
+<p>It will be necessary to specify a width and height for the video.</p>
+:ET

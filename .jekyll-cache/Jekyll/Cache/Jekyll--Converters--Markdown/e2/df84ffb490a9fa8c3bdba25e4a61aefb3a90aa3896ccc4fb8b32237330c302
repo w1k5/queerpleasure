@@ -1,0 +1,8 @@
+I"l<p>Issue: Sub menu links and sub-sub menu links lost the ability to link to external sites.</p>
+
+<p>This has been restored, see <a href="/pages/menus/external-url.html">example</a>.</p>
+
+<p>Issue is fixed in HEAD and will be part of upcoming release 2.4.0.</p>
+
+<p>Note that a release date for 2.4.0 has not been set. Please upgrade to HEAD to fix this issue.</p>
+:ET

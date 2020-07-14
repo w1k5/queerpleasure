@@ -1,0 +1,24 @@
+I"]<p>When configuring the many options it is necessary to have a good view of the names used in the layout.</p>
+
+<p>At the top level there are the following visible elements:</p>
+
+<p><img src="/assets/img/top-level-layout.png" alt="top-level elements" class="image-centered" /></p>
+
+<p>Of these the footer-separator and footer have no further internal decomposition.</p>
+
+<p>The banner-area is the most complex as is displayed below. The column-panel is the main content panel and is divided into the following sub-components:</p>
+
+<p><img src="/assets/img/column-panel-layout.png" alt="column elements" class="image-centered" /></p>
+
+<p>The secondary-column and tertiary-column may be swapped in place, or disabled altogether.</p>
+
+<p>The banner-area is build from the following components:</p>
+
+<p><img src="/assets/img/banner-area-layout.png" alt="column elements" class="image-centered" /></p>
+
+<p>Of these elements the menubar and menubar-bottom-separator may be made invisible by tapping or clicking the menu-symbol. The elements in the banner itself may be arranged differently, or may be absent.</p>
+
+<p>All elements (except the primary-column) can be disabled.</p>
+
+<p>It is also possible to insert an icon into the menubar and disable the banner. This means that the banner-area then only consist of the menubar and its separators (which can also be disabled).</p>
+:ET

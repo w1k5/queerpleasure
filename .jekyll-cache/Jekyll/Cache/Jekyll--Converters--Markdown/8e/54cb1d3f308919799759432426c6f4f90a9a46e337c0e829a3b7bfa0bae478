@@ -1,0 +1,115 @@
+I"`<p>Menu items are created through YAML front matter, except for the <code class="language-plaintext highlighter-rouge">Home</code> and the <code class="language-plaintext highlighter-rouge">Categories</code> items.</p>
+
+<h3 id="home-and-categories">Home and Categories</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Home</code> item is always present. The <code class="language-plaintext highlighter-rouge">Categories</code> item can be disabled by setting the parameter <code class="language-plaintext highlighter-rouge">site.data.setup.generate-categories-menu</code> to <em>no</em>.</p>
+
+<p>The Categories menu item is automatically suppressed when the <code class="language-plaintext highlighter-rouge">site.data.setup.drop-down-menu</code> parameter is set to <em>no</em>. This is done because the categories menu itself has no landing page and hence category selection would not be possible. There is categories widget available to make the categories accessable from any other place. By default that widget is included in the secondary-column.</p>
+
+<h3 id="frontmatter">Frontmatter</h3>
+
+<p>There are several front matter parameters that can be used to configure the menu.</p>
+
+<p>To create a top menu item (shown in the menubar below the banner):</p>
+
+<ul>
+  <li><strong>menuTopTitle</strong>: This is the name of the item that will appear in the menubar when <code class="language-plaintext highlighter-rouge">menuInclude</code> is set to <em>yes</em>.</li>
+  <li><strong>menuInclude</strong>: Set to <em>yes</em> to include the menu items that are defined in this front matter.</li>
+  <li><strong>menuTopIndex</strong>: A number that is used to sort the menu items from left to right. Lower numbers appear to the left of higher numbers. But the <code class="language-plaintext highlighter-rouge">Home</code> item always appears at the very left. When <code class="language-plaintext highlighter-rouge">Categories</code> are included, they always appear at the very right. Make sure not to use duplicate numbers as that will lead to odd effects.</li>
+  <li><strong>menuLink</strong>: Set to <em>no</em> to disable the creation of a link from the menu item. This can be useful to create dividers or when a top item itself has no landing page. Note that when the drop down menu is disabled top items without links become unusable.</li>
+</ul>
+
+<p>While the old syntax for creating sub-menu items still works, it is no longer mentioned here. Its use is discouraged.</p>
+
+<p>To create sub menu items and sub-sub menu items use the new frontmatter:</p>
+
+<ul>
+  <li><strong>menuSubs</strong>: This is the initiation of the new frontmatter used to create sub and sub-sub menu items.</li>
+</ul>
+
+<p>After the initiation use a <code class="language-plaintext highlighter-rouge">-</code> symbol to start a new sub menu item like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+... other stuff
+menuTopTitle: Classic
+menuSubs:
+- title: sub-item-1
+  index: 1
+  link: yes
+  url: http://example.com/anypage.html
+  anchorId: id-of-anchored-html-item
+- title: "----"
+  index: 2
+  link: no
+- title: sub-item-3
+---
+</code></pre></div></div>
+
+<p>This example is discussed below.</p>
+
+<h4 id="menutoptitle">menuTopTitle</h4>
+
+<p>The top title links the page to the proper top level menu item. It is mandatory, without it no sub menu item can be created.</p>
+
+<p>Note that when the drop down menu is used there does not need to be a page for the top menu item itself. However without the drop down menu and without a page linked to the top title, the menu item would simply sit in the menubar without any connections. It is therefore recommended to always provide a landing page for the top title. Even if it just tells the user to “select a subject from the menu”.</p>
+
+<h4 id="title">title</h4>
+
+<p>This is the only mandatory item, it is the text used for the sub menu item.</p>
+
+<p>Unless overriden by other frontmatter it will have:</p>
+
+<ul>
+  <li>a link to the page in which it is defined.</li>
+  <li>the sub-menu item ordering is random, though often alphabetically (Seems to depends on the file system).</li>
+  <li>the url will be the page url of the page in which it is created.</li>
+  <li>no anchor id will be used.</li>
+</ul>
+
+<h4 id="index">index</h4>
+
+<p>This determines the ordering of the sub-menu items. Lower numbers will appear above higher numbers. Make sure not to use duplicate numbers as that will lead to odd effects. (i.e. always check the menu!)</p>
+
+<h4 id="link">link</h4>
+
+<p>By default <em>yes</em> is assumed. This controls the creation of a link from the sub-menu item. It can be useful to have a separator sub-menu item without a link.</p>
+
+<h4 id="url">url</h4>
+
+<p>If another page (or even site) must be linked to a sub-menu item, this tag can be used.</p>
+
+<h4 id="anchorid">anchorId</h4>
+
+<p>Use this to anchor the sub-menu item to a specific HTML element.</p>
+
+<p>When using the banner position “top-fixed” (see <code class="language-plaintext highlighter-rouge">_data/_setup.yml</code>) be sure to set an appropriate value for the $anchor-top-fixed-offset-xxxxx properties in the classic-jekyll-theme.scss file. This will prevent the anchored item from appearing behind the banner area.</p>
+
+<h3 id="sub-sub-menu-items">Sub-sub menu items</h3>
+
+<p>Sub-sub-menu items are created in the same way the sub-items are created, but using the <code class="language-plaintext highlighter-rouge">sub</code> parameter inside <code class="language-plaintext highlighter-rouge">menuSubs</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+... other stuff
+menuTopTitle: Classic
+menuSubs:
+- title: sub-item-1
+  index: 1
+  link: yes
+  url: http://example.com/anypage.html
+  anchorId: id-of-anchored-html-item
+- title: cattle
+  index: 2
+  link: no
+  sub:
+  - title: sub-sub-item-1
+    anchorId: horses
+  - title: sub-sub-item-2
+    anchorId: cows
+- title: sub-item-3
+---
+</code></pre></div></div>
+
+<p>This will create two sub-sub menu items under the <em>cattle</em> entry.</p>
+
+<p>For the sub-sub menu entries the same tags as for the sub-menus can be used. (<code class="language-plaintext highlighter-rouge">link</code>, <code class="language-plaintext highlighter-rouge">index</code>, <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">anchorId</code>)</p>
+:ET

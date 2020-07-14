@@ -1,0 +1,28 @@
+I"æ<h3 id="category-pages">Category pages</h3>
+
+<p>Category pages can be created with a little assistance of the web designer. To kick of the creation of a category page, create a page with the <code class="language-plaintext highlighter-rouge">layout</code> set to <em>category-page</em>. Also add a <code class="language-plaintext highlighter-rouge">title</code> that is set to the name of the category for which the page is created.</p>
+
+<p>An example can be seen in the <em>pages/categories/classic.md</em> file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: category-page
+title: classic
+---
+</code></pre></div></div>
+
+<p>All other content in a category generation file is ignored.</p>
+
+<h3 id="category-menu-item">Category Menu Item</h3>
+
+<p>To enable the creation of a category menu item set the <code class="language-plaintext highlighter-rouge">site.data.setup.generate-categories-menu parameter</code> to <em>yes</em>. This will create a drop-down menu entry with the names of the categories for which pages were generated.</p>
+
+<p>PS: The name of the categories menu item can be configured in <code class="language-plaintext highlighter-rouge">site.data.text-for.tCategories</code>.</p>
+
+<h3 id="category-widget">Category widget</h3>
+
+<p>As an alternative to the menu a widget is available that can be included somewhere to have access to the category pages.</p>
+
+<h3 id="widget-or-menu">Widget or Menu</h3>
+
+<p>Using the categories menu is not possible when the drop-down menus are disabled (by setting <code class="language-plaintext highlighter-rouge">site.data.setup.drop-down-menu</code> to <em>no</em>). In that case the widget is the only way to access the categories pages.</p>
+:ET

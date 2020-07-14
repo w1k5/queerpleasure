@@ -20,7 +20,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // These definitions have been taken from main.scss
 //
-$theme-font-family:				"Helvetica Neue", Helvetica, Arial, sans-serif;
+$theme-font-family:				'Playfair Display', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $theme-font-size:				16px;
 $theme-font-weight:				400;
 $small-1-font-size:				$theme-font-size * 0.875;
@@ -35,24 +35,24 @@ $theme-line-height:				1.5;
 $hspacing-unit:					14px; // For best results, use even numbers only
 $vspacing-unit:					14px; // For best results, use even numbers only
 //
-$text-color:					#111;
-$background-color:				#fdfdfd; // Applied to the top element, override by background settings below
+$text-color:					black;
+$background-color:				#b1ebe3; // Applied to the top element, override by background settings below
 //
-$grey-color:					#828282;
+$grey-color:					#55c3b1;
 $grey-color-light:				lighten($grey-color, 40%);
 $grey-color-light-light:		lighten($grey-color-light, 40%);
 $grey-color-dark:				darken($grey-color, 25%);
-
+$darkest-color:         #4c7f77;
 // Since Liquid is not available, it is necessary to redefine the baseurl from the _config.yml file here
 //
-$baseurl:						"/classic-jekyll-theme"; // eg: "/classic" a leading '/' is important.
+$baseurl:						""; // eg: "/classic" a leading '/' is important.
 
 // *********************************************************************************************************************
 // General color and background settings
 // ---------------------------------------------------------------------------------------------------------------------
 // The theme-color is the default for some of the other elements that can be colored in this theme.
 //
-$theme-color:							green;
+$theme-color:							#0d2b2d;
 
 // Background color, picture or pattern.
 //
@@ -108,16 +108,16 @@ $banner-enabled-widest:					true;
 // Always set a fixed value ('auto' and percentages don't work)
 // CSS property: Height
 //
-$banner-height-narrow:					48px;
-$banner-height-medium:					68px;
+$banner-height-narrow:					71px;
+$banner-height-medium:					76px;
 $banner-height-widest:					135px;
 
 // The background of the banner. (Not the banner-area!)
 // CSS property: Background.
 //
-$banner-background-narrow:				white;
-$banner-background-medium:				white;
-$banner-background-widest:				white;
+$banner-background-narrow:				$grey-color;
+$banner-background-medium:				$grey-color;
+$banner-background-widest:				$grey-color;
 
 
 // *********************************************************************************************************************
@@ -129,9 +129,9 @@ $banner-background-widest:				white;
 // Controls display of the icon.
 // Note: Disabling the banner also disables the icon.
 //
-$banner-icon-enabled-narrow:			true;
-$banner-icon-enabled-medium:			true;
-$banner-icon-enabled-widest:			true;
+$banner-icon-enabled-narrow:			false;
+$banner-icon-enabled-medium:			false;
+$banner-icon-enabled-widest:			false;
 
 // The z-order of the icon. Use this to position the icon relative to the title-area and the menu-symbol.
 // CSS property: z-index
@@ -192,9 +192,9 @@ $banner-icon-url-widest:				url("#{$baseurl}/assets/img/cog-wheels-240x135.png")
 // The background for the icon div.
 // CSS property: background
 //
-$banner-icon-background-narrow:			none;
-$banner-icon-background-medium:			none;
-$banner-icon-background-widest:			none;
+$banner-icon-background-narrow:			#55c3b1;
+$banner-icon-background-medium:			#55c3b1;
+$banner-icon-background-widest:			#55c3b1;
 
 
 // *********************************************************************************************************************
@@ -217,8 +217,8 @@ $banner-title-enabled-widest:					true;
 //
 // Values: true | false
 //
-$banner-subtitle-enabled-narrow:				false;
-$banner-subtitle-enabled-medium:				false;
+$banner-subtitle-enabled-narrow:				true;
+$banner-subtitle-enabled-medium:				true;
 $banner-subtitle-enabled-widest:				true;
 
 // The z-order of the title-area. Use this to position the title-area relative to the icon and the menu-symbol.
@@ -321,9 +321,9 @@ $banner-subtitle-padding-widest:				0px;
 //
 // Note that a valid font specification requires as a minimum the size and font family
 //
-$banner-title-font-narrow:						20px $theme-font-family;
-$banner-title-font-medium:						25px $theme-font-family;
-$banner-title-font-widest:						40px $theme-font-family;
+$banner-title-font-narrow:						5vh $theme-font-family;
+$banner-title-font-medium:						5vh $theme-font-family;
+$banner-title-font-widest:						9vh $theme-font-family;
 
 // The font for the subtitle.
 // CSS property: font
@@ -344,9 +344,9 @@ $banner-title-color-widest:						$theme-color;
 // The color for the subtitle.
 // CSS property: color
 //
-$banner-subtitle-color-narrow:					$theme-color;
-$banner-subtitle-color-medium:					$theme-color;
-$banner-subtitle-color-widest:					lighten(black, 50%);
+$banner-subtitle-color-narrow:					white;
+$banner-subtitle-color-medium:					white;
+$banner-subtitle-color-widest:					white;
 
 
 // *********************************************************************************************************************
@@ -361,7 +361,7 @@ $banner-subtitle-color-widest:					lighten(black, 50%);
 // Note: This does NOT control visibility of the menubar!
 //
 $banner-menu-symbol-enabled-narrow:				true;
-$banner-menu-symbol-enabled-medium:				true;
+$banner-menu-symbol-enabled-medium:				false;
 $banner-menu-symbol-enabled-widest:				false;
 
 // The z-order of the menu symbol. Use this to position the menu symbol relative to the title-area and the icon.
@@ -576,16 +576,16 @@ $menubar-subsubitem-font-widest:					$menubar-subitem-font-widest;
 $menubar-item-color-narrow:							$theme-color;
 $menubar-item-color-medium:							$theme-color;
 $menubar-item-color-widest:							$theme-color;
-$menubar-item-color-hover-narrow:					black;
-$menubar-item-color-hover-medium:					black;
-$menubar-item-color-hover-widest:					black;
+$menubar-item-color-hover-narrow:					#55c3b17d;
+$menubar-item-color-hover-medium:					$theme-color;
+$menubar-item-color-hover-widest:					$theme-color;
 $menubar-item-color-selected-narrow:				$theme-color;
 $menubar-item-color-selected-medium:				$theme-color;
 $menubar-item-color-selected-widest:				$theme-color;
 $menubar-subitem-color-medium:						$theme-color;
 $menubar-subitem-color-widest:						$theme-color;
-$menubar-subitem-color-hover-medium:				black;
-$menubar-subitem-color-hover-widest:				black;
+$menubar-subitem-color-hover-medium:				$theme-color;
+$menubar-subitem-color-hover-widest:				$theme-color;
 $menubar-subitem-color-selected-medium:				$theme-color;
 $menubar-subitem-color-selected-widest:				$theme-color;
 $menubar-subsubitem-color-medium:					$menubar-subitem-color-medium;
@@ -633,9 +633,9 @@ $menubar-subsubitem-background-selected-widest:		$grey-color-light;
 // For narrow the height of the item should be big enough to tap.
 // CSS property: height
 //
-$menubar-item-height-narrow:						3 * $vspacing-unit;
-$menubar-subitem-height-narrow:						3 * $vspacing-unit;
-$menubar-subsubitem-height-narrow:					3 * $vspacing-unit;
+$menubar-item-height-narrow:						2 * $vspacing-unit;
+$menubar-subitem-height-narrow:						2 * $vspacing-unit;
+$menubar-subsubitem-height-narrow:					2 * $vspacing-unit;
 //
 $menubar-item-height-medium:						auto;
 $menubar-item-height-widest:						auto;
@@ -661,7 +661,7 @@ $menubar-subitem-title-symbol-code-open-narrow:		'\021E9';
 // The width of the disclosure area in the narrow vertical menubar.
 // CSS property: width
 //
-$menubar-item-disclosure-symbol-width-narrow:		10%;
+$menubar-item-disclosure-symbol-width-narrow:		0%;
 
 // The menubar item separator symbol.
 // This symbol appears between items when the menubar is horizontal, i.e. in de medium and wide layout.
@@ -761,7 +761,7 @@ $menubar-subsubitem-separator-line-color-narrow:	$menubar-background-narrow;
 // Before the items and item separators are loaded into the menubar, a menubar icon can be loaded.
 // The file _included/menubar-icon.html can be used for complex icons, or the icon can be assigned here.
 // The menubar icon can also be used to provide some padding before the home item in the menubar.
-// Note that the menubar icon is not shown in the narrow layout. 
+// Note that the menubar icon is not shown in the narrow layout.
 //
 // The icon (image)
 // CSS property: content
@@ -836,12 +836,12 @@ $column-separator-color-widest:			lighten($grey-color, 30%);
 //
 // Values: true | false
 //
-$column-separator-display:				true;
+$column-separator-display:				false;
 
 // Set the space between the top of the separator and the menubar-bottom-separator.
 // The background for the separator is the background of the column panel.
 // CSS property: margin-top
-// 
+//
 $column-separator-top-spacing:			$vspacing-unit;
 
 // Set the space between the bottom of the separator and the footer separator.
@@ -858,9 +858,9 @@ $column-separator-bottom-spacing:		$vspacing-unit;
 // Footer background.
 // CSS property: background
 //
-$footer-background-narrow:				none;
-$footer-background-medium:				none;
-$footer-background-widest:				none;
+$footer-background-narrow:				$grey-color;
+$footer-background-medium:				$grey-color;
+$footer-background-widest:				$grey-color;
 
 // The footer separator is placed between the columns panel and the footer panel.
 // CSS property: border-color
@@ -885,9 +885,9 @@ $footer-font-widest:					$small-1-font-size $theme-font-family;
 // The color for the footer text.
 // CSS property: color
 //
-$footer-color-narrow:					black;
-$footer-color-medium:					black;
-$footer-color-widest:					black;
+$footer-color-narrow:					$theme-color;
+$footer-color-medium:					$theme-color;
+$footer-color-widest:					$theme-color;
 
 
 // *********************************************************************************************************************
@@ -997,7 +997,7 @@ $vmenu-subitem-disclosure-symbol-open:					'\021E9';
 
 // The width of the disclosure symbol.
 // CSS property: width
-// 
+//
 $vmenu-subitem-disclosure-area-width-medium:			1.2em;
 $vmenu-subitem-disclosure-area-width-widest:			1.2em;
 

@@ -16,7 +16,7 @@
 # The secondary column must reside in the "_includes" directory and is called "secondary-column.html"
 # Front matter can specify a different file for the secondary column ("secondary-column-content").
 #
-secondary-column: left
+secondary-column: right
 
 # Controls visibility of the tertiary column
 # Values: present | none
@@ -27,11 +27,11 @@ secondary-column: left
 # The tertiary column must reside in the "_includes" directory and is called "tertiary-column.html"
 # Front matter can specify a different file for the tertiary column ("tertiary-column-content").
 #
-tertiary-column: present
+tertiary-column: none
 
 # A subtitle can be displayed in de banner
 #
-subtitle: "easy to use and highly customizable"
+subtitle: "Sounds Gay. Let's Do It."
 
 # Skip some of the build process for faster recompilation during content creation.
 # Values: yes | no
@@ -90,7 +90,7 @@ banner-position: top
 # Note 2: When the drop-down menus are not used, any items in the menubar without a linked page will become useless.
 # Note 3: Setting to 'no' will result in slower compilation. If possible, setting this to 'yes' during content development will help speed up the workflow.
 #
-drop-down-menu: yes 
+drop-down-menu: yes
 
 # Controls the generation of the categories menu entry in the menu bar if the drop-down-menu option is set to 'yes'. Has no impact on the categories widget.
 # Values: yes | no

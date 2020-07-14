@@ -1,0 +1,9 @@
+I"±<p>Added the following code to <code class="language-plaintext highlighter-rouge">_custom.scss</code> to add a horizontal scrollbar (issue #14) to the code sections:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.highlight {
+    overflow-x: auto;
+}
+</code></pre></div></div>
+
+<p>Also updated the description for the use of the <em>â€“incremental</em> option to the page on Jekyll -&gt; Speed. In the Jekyll release 3.7 this option is very usefull to keep the development build of Jekyll down to a minimum. My own site needs only 1.5 seconds to rebuild a page that I am working on. This down from 70 seconds with Jekyll 3.6.</p>
+:ET

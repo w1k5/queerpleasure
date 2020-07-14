@@ -1,0 +1,13 @@
+I"`<h2 id="issue-16-youtube-player-widget-shows-video-on-top-of-banner-for-top-fixed-banner-layout">Issue 16: Youtube-player widget shows video on top of banner for top-fixed banner layout.</h2>
+
+<p>Due to the way youtube videos are displayed it is not possible to use the youtube-player.html widget when the banner position is set to top-fixed in the setup.yml file.</p>
+
+<p>To include youtube video’s use the iframe directly like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;iframe src="https://www.youtube.com/embed/video-id" width="100px" height="56.25px"&gt;&lt;/iframe&gt;
+</code></pre></div></div>
+
+<p>Of course the width and height parameters should be scaled to whatever size is required. Multiples of the values given will result in a HD-aspect ratio.</p>
+
+<p>If the youtube-player widget is used for <code class="language-plaintext highlighter-rouge">banner-position: top-fixed</code>, the site and videos will work as normal. The only problem is that on scrolling the video’s may appear to float over the banner (and menubar).</p>
+:ET

@@ -1,0 +1,29 @@
+I"4<p>The main features of this theme are as follows:</p>
+
+<ul>
+  <li>RWD design (automatic reordering of the content to fit the width of the device it is viewed on)</li>
+  <li>Integrated menubar generator with drop-down menu (the drop-down aspect can be disabled)</li>
+  <li>Menu items can be three levels deep (Item, subitem, sub-subitem)</li>
+  <li>Automatic vertical menu when disabling the drop-down aspect of the menubar</li>
+  <li>Integrated categories page generator</li>
+  <li>Page by page override of layout and secondary/tertiary column content</li>
+  <li>Extensive configuration of visible elements (font, color, background, padding, size etc)</li>
+  <li>Banner &amp; menubar may be fixed to the top of the browser window</li>
+  <li>Release date for pages</li>
+  <li>Includes several widgets:
+    <ul>
+      <li>Recent posts</li>
+      <li>Older posts</li>
+      <li>Categories</li>
+    </ul>
+  </li>
+  <li>Includes cookies warning (can be disabled)</li>
+  <li>Includes disqus &amp; google analytics</li>
+  <li>Language customization (not multi-langage)</li>
+  <li>Pure HTML5/CSS3 possible (a few features need Javascript but these can be disabled)</li>
+  <li>Supports block layout</li>
+  <li>Fast rebuild option for content creation</li>
+  <li>Documented source code</li>
+  <li>Generated HTML is quite readable</li>
+</ul>
+:ET
