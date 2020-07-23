@@ -52,9 +52,7 @@
 // An image centered in a column with nothing on either side
 .image-centered {
 	display: block;
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
 }
 
 // An image floating centered with text on both sides

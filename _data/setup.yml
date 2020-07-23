@@ -53,7 +53,7 @@ realfavicongenerator: yes
 # For the number of posts visible on the home page.
 # Value: > 0
 #
-number-of-posts-on-home-page: 5
+number-of-posts-on-home-page: 3
 
 # For the number of posts titles shown in the 'recent' widget
 # Value: > 0

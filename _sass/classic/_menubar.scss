@@ -93,9 +93,8 @@
 
 					// Layout: Center vertically and justify-left
 					display: flex;
-					justify-content: start;
-					align-items: center;
-					margin: auto;
+					width: 100%;
+					text-align: center;
 
 					 // Takes up remainder of .title width
 					.text { width: 100%; }
@@ -365,7 +364,7 @@
 
 			.dropdown,
 			.dropdown-narrow {
-
+				z-index: 30;
 				// Visibility depends on hovering over the item
 				display: none;
 

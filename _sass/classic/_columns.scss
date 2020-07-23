@@ -67,6 +67,7 @@ main {
 
 		// Background for the entire panel
 		background: $column-panel-background-medium;
+		padding: 0.5em;
 
 		// This layout is row based
 		flex-direction: row;
@@ -87,7 +88,7 @@ main {
 	@include widest-layout {
 		// Background for the entire panel
 		background: $column-panel-background-widest;
-		padding: 0px 20vh;
+		padding: 1em 20vh;
 		// This layout is row based
 		flex-direction: row;
 

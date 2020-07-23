@@ -17,9 +17,9 @@
 	<div class="vmenu">
 
 	{%- comment -%}<!-- Find all entries that belong to the menuTopTitle of this document -->{%- endcomment -%}
-	
+
 	{%- assign buildTimeInSecondsSinceEpoch = site.time | date: "%s" | plus: 0 -%}
-	
+
     {%- assign pagesForPublishing = "" | split: "" -%}
 
 	{%- if site.data.setup.exclude-pages-from-menus -%}{%- else -%}
@@ -30,30 +30,30 @@
 		    {%- endif -%}
         {%- endfor -%}
     {%- endif -%}
-	
+
 	{%- if site.data.setup.include-posts-in-menus -%}
 		{%- assign pagesForPublishing = pagesForPublishing | concat: site.posts -%}
 	{%- endif -%}
 
 
 	{%- assign topTitlePages = pagesForPublishing | where:'menuInclude', true | where:'menuTopTitle', topTitle -%}
-			
+
 	{%- comment -%}<!-- note: these html comment tags are for editor coloring support
-			
+
 	Due to the poor support for variables in Liquid we have to resort to some fairly laborious code.
-			
+
 	First determine all pages that contain sub menu information for the running top menu item. These are collected in "topTitlePages"
-			
+
 	Then create four lists containing the sub menu title, index, url and link respectively. These lists are all in the same sequence such that entry [n] is applicable to the same sub menu in all lists. (I.e. they are synchronous)
-			
+
 	Then sort the lists into four new lists. Again these lists must be kept synchronous.
-			
+
 	Lastly, step through the lists to create the actual sub menu's
-			
+
 	-->{%- endcomment -%}
-						
+
 	{%- comment -%}<!-- Find all sub menu entries on the topTitlePages -->{%- endcomment -%}
-	
+
 	{%- assign subMenuTitles = "" | split: "" -%}
 	{%- assign subMenuIndexes = "" | split: "" -%}
 	{%- assign subMenuUrls = "" | split: "" -%}
@@ -106,7 +106,7 @@
 	{%- endfor -%}
 
 	{%- comment -%}<!-- Sort all 4 the lists based on the index of the subMenu that was read -->{%- endcomment -%}
-	
+
 	{%- assign sortedSubMenuTitles = "" | split: "" -%}
 	{%- assign sortedSubMenuIndexes = subMenuIndexes | sort -%}
 	{%- assign sortedSubMenuUrls = "" | split: "" -%}
@@ -196,7 +196,7 @@
 		{%- endfor -%}
 
 		{%- comment -%}<!-- Sort all 4 the lists based on the index of the subMenu that was read -->{%- endcomment -%}
-		
+
 		{%- assign sortedSubsubMenuTitles = "" | split: "" -%}
 		{%- assign sortedSubsubMenuIndexes = subsubMenuIndexes | sort -%}
 		{%- assign sortedSubsubMenuUrls = "" | split: "" -%}
@@ -221,11 +221,11 @@
 				{%- assign sortedSubsubMenuLinks = sortedSubsubMenuLinks | push: subsubMenuLinks[forloop.index0] -%}
 				{%- continue -%}
 			{%- endif -%}
-		{%- endfor %}		
+		{%- endfor %}
 		<div class="subitem">
-		
+
 		{%- comment -%}<!-- Sub menu item -->{%- endcomment -%}
-			
+
 		{%- if sortedSubsubMenuTitles.size == 0 -%}
 			{%- if sortedSubMenuLinks[forloop.index0] != false -%}
 				{%- if sortedSubMenuUrls[forloop.index0] == page.url %}
@@ -336,7 +336,7 @@
 			{%- endif -%}
 
 		    {%- comment -%}<!-- Sub sub menu items -->{%- endcomment -%}
-			    
+
     		{%- for subsubTitle in sortedSubsubMenuTitles -%}
 		    	{%- if sortedSubsubMenuLinks[forloop.index0] != false -%}
 			    	{%- if sortedSubsubMenuUrls[forloop.index0] == page.url %}
@@ -368,7 +368,7 @@
 				<div class="title"><p>{{ subsubTitle }}</p></div>
     		</div>
 				{%- endif -%}
-	    	{%- endfor -%}			
+	    	{%- endfor -%}
    		{%- endif %}
 		</div>
 	{%- endfor %}
