@@ -1,4 +1,7 @@
 /*! Override and add to the settings of _normalize.scss in this file */
+p {
+	margin: auto;
+}
 
 html {
 	font-family: $theme-font-family;
@@ -29,3 +32,7 @@ h2 {
 a, a:visited {color: $theme-color;}
 
 a:hover {color: $darkest-color;}
+
+.feed {
+	margin-bottom: 1em;
+}
