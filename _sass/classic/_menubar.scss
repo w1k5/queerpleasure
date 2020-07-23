@@ -100,7 +100,8 @@
 					.text { width: 100%; }
 
 					// Use the item color for all elements
-					p { color: $theme-color; }
+					p { color: $theme-color;
+					margin: 1em; }
 
 				}
 				// Hover effect
